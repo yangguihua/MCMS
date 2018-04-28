@@ -1,3 +1,33 @@
+git 服务器的搭建：
+yum install git //安装git
+
+useradd git //添加git用户
+
+passwd git123456 //给用户设置密码
+
+服务器端 Git 打开 RSA 认证
+
+进入 /etc/ssh 目录，编辑 sshd_config，
+
+RSAAuthentication yes
+PubkeyAuthentication yes
+AuthorizedKeysFile .ssh/authorized_keys//注释去掉
+
+保存并重启 sshd 服务
+/etc/rc.d/init.d/sshd restart
+
+回到/home/git 下
+创建 .ssh文件并改成git用户
+chown -R git:root ./.ssh
+
+出于安全考虑，创建的git用户不允许登录shell，这可以通过编辑/etc/passwd文件完成。找到类似下面的一行：
+
+git:x:1001:1001:,,,:/home/git:/bin/bash 改为： git:x:1001:1001:,,,:/home/git:/usr/bin/git-shell
+
+ssh-keygen -t rsa -C "yang5zi@example.com" //创建ssh key,邮箱为自己远程地址邮箱
+上面的输入完毕后程序同时要求输入一个密语字符串(passphrase)，空表示没有密语，该字符串为远程账户密码
+登录github。打开setting->SSH keys，点击右上角 New SSH key，把生成好的公钥id_rsa.pub内容放进 key输入框中，再为当前的key起一个title来区分每个key，另外如果是自己搭建的服务器则需要手动复制公钥到“/home/git/.ssh/authorized_keys”文件中
+
 git remote remove origin //删除远程地址 origin 为远程地址名称
 git remote add origin git@github.com:yangguihua/test-entrepot.git //添加新的远程连接地址
 git remote set-url origin git@github.com:yangguihua/test-entrepot.git //设置新的远程连接地址
