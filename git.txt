@@ -1,0 +1,13 @@
+git remote remove origin //删除远程地址 origin 为远程地址名称
+git remote add origin git@github.com:yangguihua/test-entrepot.git //添加新的远程连接地址
+git remote set-url origin git@github.com:yangguihua/test-entrepot.git //设置新的远程连接地址
+git branch 分支名 //创建本地分支
+git remote -v //查看已添加的远程连接地址
+
+//上传文件到远程仓库
+git init //初始化
+git add project //添加项目
+git commit -m "备注" //提交到本地仓库
+git remote add origin git@github.com:yangguihua/test-entrepot.git //添加新的远程连接地址，如之前已设置过远程连接，则可以跳过此步骤
+git push origin master:test // 提交文件到服务器 master为本地服务器的分支,test为服务器上的分支
+git push -f origin master //强制提交文件到服务器上，会覆盖服务器上的文件
