@@ -18,7 +18,7 @@
 .right_menu {
 	width: 870px;
 	height: auto;
-	margin: auto;
+	float: right;
 }
 .right_top>img {
 	margin:auto
