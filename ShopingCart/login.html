@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/login.css" />
+		<title>login</title>
+	</head>
+
+	<body ng-app="App" ng-controller="controller">
+		<div class="login">
+			<div class="backImg">
+				<img src="img/login.png" width="300px" height="200px" />
+				<div class="text-input">
+					<input type="text" value="" class="input_as" placeholder="请输入手机号/账号" /><br />
+					<input type="password" value="" class="input_as" placeholder="请输入密码" /><br />
+					<button type="button" ng-click="login()" class="btn btn-primary btn-default">登录</button>
+				</div>
+			</div>
+			<div class="QRcode">
+				<img src="img/login_code.png" width="120px" height="120px" />
+				<p>微信扫一扫登录</p>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/angular.1.6.8.min.js"></script>
+		<script>
+			angular.module('App', []).controller("controller", function($scope) {
+				$scope.login = function(){
+					window.open('myMessage.html','_self');
+				}
+			});
+		</script>
+	</body>
+
+</html>

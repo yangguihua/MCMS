@@ -1,0 +1,12 @@
+{
+	"index.html": {
+		"refer": [
+			"login.html"
+		]
+	},
+	"login.html": {
+		"refer": [
+			"myMessage.html"
+		]
+	}
+}

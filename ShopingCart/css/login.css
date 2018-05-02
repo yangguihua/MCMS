@@ -1,0 +1,40 @@
+.backImg {
+	position: absolute;
+	top: 30%;
+	left: 20%;
+}
+.text-input {
+	position: absolute;
+	width: auto;
+	height: auto;
+	margin-top: -55%;
+	left: 20%;
+}
+.input_as {
+	margin-top: 10px;
+	width: 200px;
+	height: 30px;
+	background: none;
+	background: url("../img/login_input.png");
+	background: rgba(255,255,255,0.5);
+	outline: none;
+	border: 1px solid rgba(255,255,255,0.5);
+	border-radius: 6px;
+}
+.text-input .btn {
+	text-align: center;
+	/*margin-left: 5px;*/
+	margin-top: 10px;
+	width: 200px;
+}
+.QRcode {
+	position: absolute;
+	top: 35%;
+	left: 65%;
+}
+.QRcode>p{
+	margin-top: 10px;
+	margin-left: -10px;
+	color: #FFFFFF;
+	font-size: 20px;
+}
