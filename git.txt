@@ -1,43 +1,43 @@
-git ·şÎñÆ÷µÄ´î½¨£º
-yum install git //°²×°git
+git æœåŠ¡å™¨çš„æ­å»ºï¼š
+yum install git //å®‰è£…git
 
-useradd git //Ìí¼ÓgitÓÃ»§
+useradd git //æ·»åŠ gitç”¨æˆ·
 
-passwd git123456 //¸øÓÃ»§ÉèÖÃÃÜÂë
+passwd git123456 //ç»™ç”¨æˆ·è®¾ç½®å¯†ç 
 
-·şÎñÆ÷¶Ë Git ´ò¿ª RSA ÈÏÖ¤
+æœåŠ¡å™¨ç«¯ Git æ‰“å¼€ RSA è®¤è¯
 
-½øÈë /etc/ssh Ä¿Â¼£¬±à¼­ sshd_config£¬
+è¿›å…¥ /etc/ssh ç›®å½•ï¼Œç¼–è¾‘ sshd_configï¼Œ
 
 RSAAuthentication yes
 PubkeyAuthentication yes
-AuthorizedKeysFile .ssh/authorized_keys//×¢ÊÍÈ¥µô
+AuthorizedKeysFile .ssh/authorized_keys//æ³¨é‡Šå»æ‰
 
-±£´æ²¢ÖØÆô sshd ·şÎñ
+ä¿å­˜å¹¶é‡å¯ sshd æœåŠ¡
 /etc/rc.d/init.d/sshd restart
 
-»Øµ½/home/git ÏÂ
-´´½¨ .sshÎÄ¼ş²¢¸Ä³ÉgitÓÃ»§
+å›åˆ°/home/git ä¸‹
+åˆ›å»º .sshæ–‡ä»¶å¹¶æ”¹æˆgitç”¨æˆ·
 chown -R git:root ./.ssh
 
-³öÓÚ°²È«¿¼ÂÇ£¬´´½¨µÄgitÓÃ»§²»ÔÊĞíµÇÂ¼shell£¬Õâ¿ÉÒÔÍ¨¹ı±à¼­/etc/passwdÎÄ¼şÍê³É¡£ÕÒµ½ÀàËÆÏÂÃæµÄÒ»ĞĞ£º
+å‡ºäºå®‰å…¨è€ƒè™‘ï¼Œåˆ›å»ºçš„gitç”¨æˆ·ä¸å…è®¸ç™»å½•shellï¼Œè¿™å¯ä»¥é€šè¿‡ç¼–è¾‘/etc/passwdæ–‡ä»¶å®Œæˆã€‚æ‰¾åˆ°ç±»ä¼¼ä¸‹é¢çš„ä¸€è¡Œï¼š
 
-git:x:1001:1001:,,,:/home/git:/bin/bash ¸ÄÎª£º git:x:1001:1001:,,,:/home/git:/usr/bin/git-shell
+git:x:1001:1001:,,,:/home/git:/bin/bash æ”¹ä¸ºï¼š git:x:1001:1001:,,,:/home/git:/usr/bin/git-shell
 
-ssh-keygen -t rsa -C "yang5zi@example.com" //´´½¨ssh key,ÓÊÏäÎª×Ô¼ºÔ¶³ÌµØÖ·ÓÊÏä
-ÉÏÃæµÄÊäÈëÍê±Ïºó³ÌĞòÍ¬Ê±ÒªÇóÊäÈëÒ»¸öÃÜÓï×Ö·û´®(passphrase)£¬¿Õ±íÊ¾Ã»ÓĞÃÜÓï£¬¸Ã×Ö·û´®ÎªÔ¶³ÌÕË»§ÃÜÂë
-µÇÂ¼github¡£´ò¿ªsetting->SSH keys£¬µã»÷ÓÒÉÏ½Ç New SSH key£¬°ÑÉú³ÉºÃµÄ¹«Ô¿id_rsa.pubÄÚÈİ·Å½ø keyÊäÈë¿òÖĞ£¬ÔÙÎªµ±Ç°µÄkeyÆğÒ»¸ötitleÀ´Çø·ÖÃ¿¸ökey£¬ÁíÍâÈç¹ûÊÇ×Ô¼º´î½¨µÄ·şÎñÆ÷ÔòĞèÒªÊÖ¶¯¸´ÖÆ¹«Ô¿µ½¡°/home/git/.ssh/authorized_keys¡±ÎÄ¼şÖĞ
+ssh-keygen -t rsa -C "yang5zi@163.com" //åˆ›å»ºssh key,é‚®ç®±ä¸ºè‡ªå·±è¿œç¨‹åœ°å€é‚®ç®±
+ä¸Šé¢çš„è¾“å…¥å®Œæ¯•åç¨‹åºåŒæ—¶è¦æ±‚è¾“å…¥ä¸€ä¸ªå¯†è¯­å­—ç¬¦ä¸²(passphrase)ï¼Œç©ºè¡¨ç¤ºæ²¡æœ‰å¯†è¯­ï¼Œè¯¥å­—ç¬¦ä¸²ä¸ºè¿œç¨‹è´¦æˆ·å¯†ç 
+ç™»å½•githubã€‚æ‰“å¼€setting->SSH keysï¼Œç‚¹å‡»å³ä¸Šè§’ New SSH keyï¼ŒæŠŠç”Ÿæˆå¥½çš„å…¬é’¥id_rsa.pubå†…å®¹æ”¾è¿› keyè¾“å…¥æ¡†ä¸­ï¼Œå†ä¸ºå½“å‰çš„keyèµ·ä¸€ä¸ªtitleæ¥åŒºåˆ†æ¯ä¸ªkeyï¼Œå¦å¤–å¦‚æœæ˜¯è‡ªå·±æ­å»ºçš„æœåŠ¡å™¨åˆ™éœ€è¦æ‰‹åŠ¨å¤åˆ¶å…¬é’¥åˆ°â€œ/home/git/.ssh/authorized_keysâ€æ–‡ä»¶ä¸­
 
-git remote remove origin //É¾³ıÔ¶³ÌµØÖ· origin ÎªÔ¶³ÌµØÖ·Ãû³Æ
-git remote add origin git@github.com:yangguihua/test-entrepot.git //Ìí¼ÓĞÂµÄÔ¶³ÌÁ¬½ÓµØÖ·
-git remote set-url origin git@github.com:yangguihua/test-entrepot.git //ÉèÖÃĞÂµÄÔ¶³ÌÁ¬½ÓµØÖ·
-git branch ·ÖÖ§Ãû //´´½¨±¾µØ·ÖÖ§
-git remote -v //²é¿´ÒÑÌí¼ÓµÄÔ¶³ÌÁ¬½ÓµØÖ·
+git remote remove origin //åˆ é™¤è¿œç¨‹åœ°å€ origin ä¸ºè¿œç¨‹åœ°å€åç§°
+git remote add origin git@github.com:yangguihua/test-entrepot.git //æ·»åŠ æ–°çš„è¿œç¨‹è¿æ¥åœ°å€
+git remote set-url origin git@github.com:yangguihua/test-entrepot.git //è®¾ç½®æ–°çš„è¿œç¨‹è¿æ¥åœ°å€
+git branch åˆ†æ”¯å //åˆ›å»ºæœ¬åœ°åˆ†æ”¯
+git remote -v //æŸ¥çœ‹å·²æ·»åŠ çš„è¿œç¨‹è¿æ¥åœ°å€
 
-//ÉÏ´«ÎÄ¼şµ½Ô¶³Ì²Ö¿â
-git init //³õÊ¼»¯
-git add project //Ìí¼ÓÏîÄ¿
-git commit -m "±¸×¢" //Ìá½»µ½±¾µØ²Ö¿â
-git remote add origin git@github.com:yangguihua/test-entrepot.git //Ìí¼ÓĞÂµÄÔ¶³ÌÁ¬½ÓµØÖ·£¬ÈçÖ®Ç°ÒÑÉèÖÃ¹ıÔ¶³ÌÁ¬½Ó£¬Ôò¿ÉÒÔÌø¹ı´Ë²½Öè
-git push origin master:test // Ìá½»ÎÄ¼şµ½·şÎñÆ÷ masterÎª±¾µØ·şÎñÆ÷µÄ·ÖÖ§,testÎª·şÎñÆ÷ÉÏµÄ·ÖÖ§
-git push -f origin master //Ç¿ÖÆÌá½»ÎÄ¼şµ½·şÎñÆ÷ÉÏ£¬»á¸²¸Ç·şÎñÆ÷ÉÏµÄÎÄ¼ş
+//ä¸Šä¼ æ–‡ä»¶åˆ°è¿œç¨‹ä»“åº“
+git init //åˆå§‹åŒ–
+git add project //æ·»åŠ é¡¹ç›®
+git commit -m "å¤‡æ³¨" //æäº¤åˆ°æœ¬åœ°ä»“åº“
+git remote add origin git@github.com:yangguihua/test-entrepot.git //æ·»åŠ æ–°çš„è¿œç¨‹è¿æ¥åœ°å€ï¼Œå¦‚ä¹‹å‰å·²è®¾ç½®è¿‡è¿œç¨‹è¿æ¥ï¼Œåˆ™å¯ä»¥è·³è¿‡æ­¤æ­¥éª¤
+git push origin master:test // æäº¤æ–‡ä»¶åˆ°æœåŠ¡å™¨ masterä¸ºæœ¬åœ°æœåŠ¡å™¨çš„åˆ†æ”¯,testä¸ºæœåŠ¡å™¨ä¸Šçš„åˆ†æ”¯
+git push -f origin master //å¼ºåˆ¶æäº¤æ–‡ä»¶åˆ°æœåŠ¡å™¨ä¸Šï¼Œä¼šè¦†ç›–æœåŠ¡å™¨ä¸Šçš„æ–‡ä»¶
