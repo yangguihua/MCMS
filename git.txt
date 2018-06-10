@@ -41,3 +41,9 @@ git commit -m "备注" //提交到本地仓库
 git remote add origin git@github.com:yangguihua/test-entrepot.git //添加新的远程连接地址，如之前已设置过远程连接，则可以跳过此步骤
 git push origin master:test // 提交文件到服务器 master为本地服务器的分支,test为服务器上的分支
 git push -f origin master //强制提交文件到服务器上，会覆盖服务器上的文件
+
+//克隆（拉取代码）
+1.打开终端，cd到自己想要存放项目的文件夹
+cd 文件夹
+2.输入git clone url ，url为你要拉取的项目地址
+git clone url
